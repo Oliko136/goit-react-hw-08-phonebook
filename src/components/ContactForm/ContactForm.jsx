@@ -13,7 +13,7 @@ export const ContactForm = () => {
         
         const newContact = {
             name: form.elements.name.value,
-            phone: form.elements.phone.value
+            number: form.elements.number.value
         }
 
         const action = addContact(newContact);
@@ -22,7 +22,7 @@ export const ContactForm = () => {
     }
     
     const contactNameId = useId();
-    const contactPhoneId = useId();
+    const contactNumberId = useId();
 
 
     return (
@@ -33,8 +33,8 @@ export const ContactForm = () => {
                 </div>
                 
                 <div className={styles.formField}>
-                    <label htmlFor={contactPhoneId} className={styles.formLabel}>Number</label>
-                    <input className={styles.formInput} id={contactPhoneId} type="tel" name="phone" placeholder="Phone" required />
+                    <label htmlFor={contactNumberId} className={styles.formLabel}>Number</label>
+                    <input className={styles.formInput} id={contactNumberId} type="tel" name="number" placeholder="Number" required />
                 </div>
             
                 <button type="submit" className={styles.formButton}>Add contact</button>

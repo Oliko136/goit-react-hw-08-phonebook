@@ -17,8 +17,8 @@ export const ContactList = () => {
         dispatch(deleteContact(id))
     }
 
-    const elements = items.map(({ id, name, phone }) =>
-        <li className={styles.contactItem} key={id}>{name}: {phone} <button className={styles.deleteButton} onClick={() => handleDelete(id)} type='button'>Delete</button></li>);
+    const elements = items.map(({ id, name, number }) =>
+        <li className={styles.contactItem} key={id}>{name}: {number} <button className={styles.deleteButton} onClick={() => handleDelete(id)} type='button'>Delete</button></li>);
 
     return (
         <>

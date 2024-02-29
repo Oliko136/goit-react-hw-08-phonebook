@@ -1,11 +1,8 @@
 import { useId } from "react";
-//import { useDispatch } from "react-redux";
 import styles from './RegisterForm.module.css';
 
-const RegisterForm = () => {
-    //const dispatch = useDispatch();
-    
-    
+const RegisterForm = ({onSubmit}) => {
+
     const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -16,9 +13,7 @@ const RegisterForm = () => {
             password: form.elements.password.value
         }
 
-        //const action = register(newUser);
-        //dispatch(action);
-        console.log(newUser)
+        onSubmit(newUser);
         form.reset();
     }
 
