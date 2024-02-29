@@ -1,7 +1,6 @@
-import { useMemo } from "react";
+import { useId } from "react";
 import { useDispatch } from "react-redux";
 import { addContact } from "../../redux/contacts/contacts-operations";
-import { nanoid } from 'nanoid';
 import styles from './ContactForm.module.css';
 
 export const ContactForm = () => {
@@ -22,8 +21,8 @@ export const ContactForm = () => {
         form.reset();
     }
     
-    const contactNameId = useMemo(() => nanoid(), []);
-    const contactPhoneId = useMemo(() => nanoid(), []);
+    const contactNameId = useId();
+    const contactPhoneId = useId();
 
 
     return (

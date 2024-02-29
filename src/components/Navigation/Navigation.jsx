@@ -1,12 +1,16 @@
 import { NavLink } from "react-router-dom";
+import AuthNav from './AuthNav';
 
 const Navigation = () => {
+    const isLoggedIn = true;
+
     return (
         <nav>
             <ul>
-                <li><NavLink to="/register">Register</NavLink></li>
-                <li><NavLink to="/login">Login</NavLink></li>
-                <li><NavLink to="/contacts">Contacts</NavLink></li>
+                {isLoggedIn
+                    ? <li><NavLink to="/contacts">Contacts</NavLink></li>
+                    : <AuthNav />}
+                
             </ul>
         </nav>
     )

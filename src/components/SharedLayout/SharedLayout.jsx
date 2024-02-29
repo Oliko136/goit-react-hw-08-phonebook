@@ -6,12 +6,13 @@ import Navigation from "components/Navigation/Navigation";
 import UserMenu from "components/UserMenu/UserMenu";
 
 const SharedLayout = () => {
+    const isLoggedIn = true;
     return (
         <>
             <header>
                 <Container>
                     <Navigation />
-                    <UserMenu />
+                    {isLoggedIn && <UserMenu />}
                 </Container>
             </header>
             <main>
