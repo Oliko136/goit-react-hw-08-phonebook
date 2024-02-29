@@ -1,5 +1,5 @@
 import { useId } from "react";
-import styles from '../RegisterForm/RegisterForm.module.css';
+import styles from './LoginForm.module.css';
 
 const LoginForm = ({onSubmit}) => {
     const handleSubmit = (event) => {

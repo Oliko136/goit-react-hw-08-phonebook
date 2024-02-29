@@ -1,0 +1,28 @@
+.userMenu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.userMenuGreeting {
+    font-size: 20px;
+}
+
+.logOutButton {
+    display: block;
+    margin: 0 auto;
+    height: 40px;
+    padding: 0 10px;
+    cursor: pointer;
+    border: 1px solid #3903fc;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: transparent;
+}
+
+.logOutButton:hover,
+.logOutButton:focus {
+    background-color: #3903fc;
+    border: 1px solid #a9c911;
+    color: #ffffff;
+}

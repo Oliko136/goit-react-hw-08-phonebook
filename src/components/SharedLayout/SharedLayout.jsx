@@ -6,6 +6,7 @@ import { Loader } from "components/Loader/Loader";
 import Container from "components/Container/Container";
 import Navigation from "components/Navigation/Navigation";
 import UserMenu from "components/UserMenu/UserMenu";
+import styles from './SharedLayout.module.css';
 
 
 const SharedLayout = () => {
@@ -13,11 +14,9 @@ const SharedLayout = () => {
     
     return (
         <>
-            <header>
-                <Container>
+            <header className={styles.header}>
                     <Navigation />
                     {isLoggedIn && <UserMenu />}
-                </Container>
             </header>
             <main>
                 <Container>
